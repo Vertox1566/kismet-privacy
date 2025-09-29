@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kismet - Твоя судьба на звездах</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            background-color: #0c0a1a;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            z-index: -2;
+        }
+
+        /* Анимация звезд */
+        #stars, #stars2, #stars3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat;
+            background-position: 0 0;
+            z-index: -1;
+        }
+        #stars { background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); animation: move-twink-back 200s linear infinite; }
+        #stars2 { background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); animation: move-twink-back 150s linear infinite; opacity: 0.5;}
+        #stars3 { background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); animation: move-twink-back 100s linear infinite; opacity: 0.3;}
+        
+        @keyframes move-twink-back {
+            from {background-position:0 0;}
+            to {background-position:-10000px 5000px;}
+        }
+
+        .container {
+            padding: 20px;
+            background: rgba(27, 39, 53, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .logo {
+            font-size: 56px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff00c1, 0 0 30px #ff00c1;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #d1d1d1;
+            margin-bottom: 40px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .button-primary {
+            background-color: #ff00c1;
+            color: #fff;
+            box-shadow: 0 0 20px #ff00c1;
+        }
+        .button-primary:hover {
+            background-color: #e600ad;
+            box-shadow: 0 0 30px #ff00c1;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+        .button-secondary:hover {
+            background-color: #fff;
+            color: #0c0a1a;
+            transform: translateY(-2px);
+        }
+        
+        .button-disabled {
+            background-color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.5);
+            cursor: not-allowed;
+            border-color: rgba(255,255,255,0.2);
+        }
+         .button-disabled:hover {
+            transform: none;
+         }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #a0a0a0;
+        }
+
+        .footer a {
+            color: #c0c0c0;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <div class="container">
+        <div class="logo">Kismet</div>
+        <div class="subtitle">Твоя встреча, предначертанная звездами</div>
+        
+        <div class="button-group">
+            <!-- Ссылка на веб-версию -->
+            <a href="ССЫЛКА_НА_ВАШУ_ВЕБ_ВЕРСИЮ" class="button button-primary">Войти в веб-версию</a>
+
+            <!-- Ссылка на скачивание Android -->
+            <a href="ССЫЛКА_НА_ПРИЛОЖЕНИЕ_В_RUSTORE" class="button button-secondary">Скачать для Android</a>
+
+            <!-- Ссылка на скачивание Windows -->
+            <a href="ССЫЛКА_НА_MSIX_ФАЙЛ_НА_GITHUB" class="button button-secondary">Скачать для Windows</a>
+
+            <!-- Кнопка-заглушка для iOS -->
+            <div class="button button-disabled">Скоро для iOS</div>
+        </div>
+
+        <div class="footer">
+            <a href="/privacy-policy.html">Политика конфиденциальности</a>
+            <a href="/data-rights.html">Права субъекта</a>
+        </div>
+    </div>
+
+</body>
+</html>
